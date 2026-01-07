@@ -12,7 +12,7 @@ import time
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-client = genai.Client(api_key="AIzaSyDGE8UiKyQE8UFatFFyU8aVnL0rmK8nkPM")
+client = genai.Client(api_key="GEMINI_API_KEY")
 
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
@@ -196,4 +196,5 @@ def analyze():
 # RUN
 # ==============================
 if __name__ == "__main__":
+
     app.run(debug=True, port=8080)
